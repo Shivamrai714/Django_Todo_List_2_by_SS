@@ -1,0 +1,1 @@
+This is learned Django TodoList Structure project from the rajput sir.

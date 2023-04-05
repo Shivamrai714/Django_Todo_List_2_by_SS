@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Sans:wght@200&family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<style>
+    input {
+        padding: 5px;
+        font-family: 'Abel', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Nanum Gothic', sans-serif;
+        border: solid 2px black;
+        border-radius: 4px;
+        font-weight: bolder;
+        width:200px;
+    }
+    
+    .container {
+        font-family: 'Abel', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Nanum Gothic', sans-serif;
+        background-color: #F8F8F8;
+        height: 98vh;
+        max-width: 70%;
+        margin: 0px auto;
+        padding-top: 0px;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        max-width: 880px;
+        margin: 0px auto;
+        align-items: center;
+        font-size: large;
+        font-weight: bolder;
+        background-color: #E8E8E8;
+    }
+    
+    .fav-todo img {
+        height: 60px;
+    }
+    
+    .fav-todo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar ul li {
+        display: inline;
+        margin: 0px 60px;
+    }
+    
+    .navbar-text {
+        margin-left: 30px;
+    }
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        max-width: 550px;
+        
+        background-color: #E8E8E8;
+        margin: 10px auto;
+        margin-top: 50px;
+        align-items:center;
+        padding:10px;
+        padding-bottom:30px;
+    }
+
+
+    table{
+        background-color:#fff25d;
+        width:500px;
+        padding:20px;
+    }
+    th{
+        width:40%;
+    }
+    .submit
+    {
+        background-color: #00AB66; 
+        color:white;
+    }
+    .error{
+        color:red;
+        font-weight:bold;
+    }
+
+    .nav-link{
+        text-decoration:none;
+    }
+   
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="navbar">
+            <div class="fav-todo">
+                <img src="https://img.freepik.com/premium-vector/month-planning-list-time-management_530733-2841.jpg?w=996"> <span class="navbar-text">To-Do</span>
+            </div>
+
+
+
+            <ul>
+                <li> <input type="text" placeholder="search"></li>
+                <li><a href='/register' class='nav-link'>Register</a></li>
+
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <h4>Login</h4>
+                <form method='POST'>
+                    <table>
+                        {{ login.as_table }} {% csrf_token %}
+                        
+                        
+                      
+                      
+                    </table>
+                    <table>
+                        <tr>
+                            <td style='padding-left:190px;' class='error'>
+                                {{ message }}
+                            </td>
+                        </tr>
+                        <tr><td style='padding-left:190px;'>
+                        <input type='submit' value='Login' class='submit'/>
+                    
+                    </td>
+                </tr>
+                
+                    </table>
+                       
+                </form>
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
